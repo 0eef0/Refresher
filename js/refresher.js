@@ -51,6 +51,7 @@ for(var i = 0; i < input.length; i++){
         (sortedList[0] * sortedList[1] * sortedList[2])
         );
 }
+console.log(totalRibbonLength);
 
 function showAnswersOne(){
     document.getElementById("question").innerHTML = `The elves are building the sleigh that will be carrying all of the presents this year. In order to make sure it's big enough to carry all of the presents, the elves need to know how much volume is taken up by ALL the presents.`;
@@ -69,8 +70,7 @@ function showAnswersThree(){
 }
 function showAnswersFour(){
     document.getElementById("question").innerHTML = `The elves are putting the finishing touches on the presents, now that the presents are nicely wrapped they all need a bow to make them perfect. The elves will need to find the length around both sides of the present (also known as the perimeter) so there is enough ribbon to make it all the way around. Once they have the right length for the box they need to make sure they add extra for the ribbon equal to the length, width, and height
-
     The elves know that the easiest way to wrap a ribbon is around the smallest sides and that the perfect length of ribbon for any bow is the same as the volume.
     `;
-    document.getElementById("answer") = `Answer: ${totalRibbonLength} Feet`;
+    document.getElementById("answer").innerHTML = `Answer: ${totalRibbonLength} Feet`;
 }
