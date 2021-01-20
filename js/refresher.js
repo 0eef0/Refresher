@@ -51,3 +51,26 @@ for(var i = 0; i < input.length; i++){
         (sortedList[0] * sortedList[1] * sortedList[2])
         );
 }
+
+function showAnswersOne(){
+    document.getElementById("question").innerHTML = `The elves are building the sleigh that will be carrying all of the presents this year. In order to make sure it's big enough to carry all of the presents, the elves need to know how much volume is taken up by ALL the presents.`;
+    document.getElementById("answer").innerHTML = `Answer: ${totalVolume} Feet Cubed`;
+}
+function showAnswersTwo(){
+    document.getElementById("question").innerHTML = `The elves are trying to wrap all of the presents for christmas. There are 2 different teams working together one that is cutting the boxes of paper for wrapping and one that is doing the wrapping. Find the smallest area square of wrapping paper that you can cut for the box to be completely wrapped. (use the instructions in the picture below to see how elves wrap their gifts and what I mean by square of paper). 
+    
+    When trying to find the layout of the square of wrapping paper you need to find the length and width that is the most efficient. This is created with the formula:                    (2S + L) ( 2M + 2S) where L is the longest side, S is the smallest side, and M is the middle length side. 
+    `;
+    document.getElementById("answer").innerHTML = `Answer: ${totalSurfaceArea} Feet Squared`
+}
+function showAnswersThree(){
+    document.getElementById("question").innerHTML = `The headmaster elf is getting ready to order all of the wrapping paper needed for every wrapping team and he needs to know how much your team needs. The wrapping paper is cut from a giant spool one at a time. It doesn’t matter how tall the paper is, it will always fit the height. Find how much paper you will cut from the giant spool to cover everything with the least amount of waste. (hint: since the height will always fit everything make sure your length you cut is the smallest side.)`;
+    document.getElementById("answer").innerHTML = `Answer: ${totalLength} Feet`;
+}
+function showAnswersFour(){
+    document.getElementById("question").innerHTML = `The elves are putting the finishing touches on the presents, now that the presents are nicely wrapped they all need a bow to make them perfect. The elves will need to find the length around both sides of the present (also known as the perimeter) so there is enough ribbon to make it all the way around. Once they have the right length for the box they need to make sure they add extra for the ribbon equal to the length, width, and height
+
+    The elves know that the easiest way to wrap a ribbon is around the smallest sides and that the perfect length of ribbon for any bow is the same as the volume.
+    `;
+    document.getElementById("answer") = `Answer: ${totalRibbonLength} Feet`;
+}
