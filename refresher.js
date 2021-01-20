@@ -12,7 +12,7 @@ for(var i = 0; i < input.length; i++){
 var totalVolume = 0;
 for(var i = 0; i < input.length; i++){
     var volume = 1;
-    volume *= (input[i][0] + input[i][1] + input[i][2]);
+    volume *= (input[i][0] * input[i][1] * input[i][2]);
     totalVolume += volume;
 }
 console.log(totalVolume);
@@ -21,6 +21,33 @@ console.log(totalVolume);
 var totalSurfaceArea = 0;
 for(var i = 0; i < input.length; i++){
     var sortedList = input[i].sort(function(a,b){return a - b});
-    totalSurfaceArea += (((2 * sortedList[0]) + sortedList[2]) + ((2 * sortedList[1] + sortedList[0])));
+    totalSurfaceArea += (((2 * sortedList[0]) + sortedList[2]) * (((2 * sortedList[1]) + (2 * sortedList[0]))));
 }
 console.log(totalSurfaceArea);
+
+//Third Problem
+var totalLength = 0;
+for(var i = 0; i < input.length; i++){
+    var sortedList = input[i].sort(function(a,b){return a - b});
+    var shortSide = 0;
+    var dimensionOne = (2 * sortedList[0]) + sortedList[2];
+    var dimensionTwo = (2 * sortedList[1]) + (2 * sortedList[0]);
+    if(dimensionOne < dimensionTwo){
+        shortSide += dimensionOne;
+    }else{
+        shortSide += dimensionTwo;
+    }
+    totalLength += shortSide;
+}
+console.log(totalLength);
+
+//Fourth Problem
+var totalRibbonLength = 0;
+for(var i = 0; i < input.length; i++){
+    var sortedList = input[i].sort(function(a,b){return a - b});
+    totalRibbonLength += (
+        ((2 * sortedList[0]) + (2 * sortedList[1])) + 
+        ((2 * sortedList[0]) + (2 * sortedList[2])) +
+        (sortedList[0] * sortedList[1] * sortedList[2])
+        );
+}
